@@ -38,7 +38,7 @@ Ashborn/
    └─ env/                    ← optional virtual environment (do not commit; add to .gitignore)
 ```
 
-###🚀 Quick start 
+### Quick start 🚀
 1) Open a terminal.
 
 2) Create and activate a virtual environment (PowerShell):
@@ -59,14 +59,14 @@ python -m pip install mediapipe==0.10.14 opencv-python numpy pynput
 python main.py
 ```
 
-###⚙️ Configuration 
+### Configuration ⚙️
 Adjust these parameters in `main.py` to suit your setup:
 - **`pinch_threshold`**: Distance (normalized) at which a pinch is detected. Increase if clicks/scrolls trigger too easily; decrease if they do not trigger.
 - **`scroll_sensitivity`**: Scales how fast the page scrolls during a pinch.
 - **Camera index**: If the webcam does not open, change `cv2.VideoCapture(0)` to `cv2.VideoCapture(1)` (or another index).
 - **Multi-monitor setups**: Current mapping targets the primary monitor. If you have multiple displays, you may need custom mapping logic.
 
-###🛠️ Troubleshooting MediaPipe installation 
+### Troubleshooting MediaPipe installation 🛠️
 If you see `ModuleNotFoundError: No module named 'mediapipe'` or `ERROR: Could not build wheels for mediapipe`:
 
 1) Verify Python and pip match the same interpreter:
