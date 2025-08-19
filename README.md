@@ -112,7 +112,5 @@ Replace the filename to match your Python minor version (e.g., `cp310` for Pytho
 - [OpenCV](https://opencv.org/)
 - [`pynput` on PyPI](https://pypi.org/project/pynput/)
 
-### License 📄
-If a `LICENSE` file is present in the repository, that license applies. Otherwise, consider adding an open-source license (e.g., MIT) to clarify usage rights.
 
 
