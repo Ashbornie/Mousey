@@ -1,22 +1,30 @@
-## Mousey - Hand-Tracking Mouse Control (Windows)
+## Mousey - Hand-Tracking Mouse Control (Windows) 🖱️🖐️
 
-### Overview
+### Overview ✨
 Control your mouse cursor using hand gestures captured from your webcam. This project uses OpenCV for video capture, MediaPipe for real-time hand landmark detection, and `pynput` to move the system cursor and perform clicks/scrolls.
 
-### Features
+### Tech Stack 🧰
+- **Language**: [Python](https://www.python.org/) 3.8–3.12 🐍
+- **Computer Vision**: [OpenCV](https://opencv.org/) 📷
+- **Hand Tracking**: [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker) ✋
+- **Input Control**: [`pynput`](https://pypi.org/project/pynput/) ⌨️
+- **Math/Utils**: [NumPy](https://numpy.org/) 🔢
+- **OS**: Windows 10/11 🪟
+
+### Features ✅
 - **Natural cursor control**: Move your right hand to move the cursor.
 - **Scroll gesture**: Pinch your right index finger and thumb to enable scroll, then move up/down to scroll.
 - **Click-and-drag**: Pinch your left index finger and thumb to press/hold the left mouse button; release to drop.
 - **Dynamic DPI awareness**: Automatically adapts to your primary display resolution.
 
-### Requirements
+### Requirements 🧩
 - Windows 10/11 (x64)
 - A working webcam
 - Python 3.8–3.12 (recommended)
 
 MediaPipe provides prebuilt wheels for Windows x64 for Python 3.8–3.12. If you are on Python 3.13, please create a Python 3.12 virtual environment (instructions below). Using the same interpreter for both `python` and `pip` is essential.
 
-### Folder structure
+### Folder structure 📁
 ```
 Ashborn/
 └─ Mousey/
@@ -25,7 +33,7 @@ Ashborn/
    └─ env/                    ← optional virtual environment (do not commit; add to .gitignore)
 ```
 
-### Quick start
+### Quick start 🚀
 1) Open a terminal.
 
 2) Create and activate a virtual environment (PowerShell):
@@ -46,19 +54,19 @@ python -m pip install mediapipe==0.10.14 opencv-python numpy pynput
 python main.py
 ```
 
-### Gestures and controls
+### Gestures and controls 🎮
 - **Move cursor (Right hand)**: Move your right hand; the cursor follows your right index fingertip.
 - **Scroll (Right hand pinch)**: Pinch right thumb and index to start scrolling; move hand vertically to scroll. Release to stop.
 - **Click & drag (Left hand pinch)**: Pinch left thumb and index to press/hold left button; move to drag; release to drop.
 
-### Configuration
+### Configuration ⚙️
 Adjust these parameters in `main.py` to suit your setup:
 - **`pinch_threshold`**: Distance (normalized) at which a pinch is detected. Increase if clicks/scrolls trigger too easily; decrease if they do not trigger.
 - **`scroll_sensitivity`**: Scales how fast the page scrolls during a pinch.
 - **Camera index**: If the webcam does not open, change `cv2.VideoCapture(0)` to `cv2.VideoCapture(1)` (or another index).
 - **Multi-monitor setups**: Current mapping targets the primary monitor. If you have multiple displays, you may need custom mapping logic.
 
-### Troubleshooting MediaPipe installation
+### Troubleshooting MediaPipe installation 🛠️
 If you see `ModuleNotFoundError: No module named 'mediapipe'` or `ERROR: Could not build wheels for mediapipe`:
 
 1) Verify Python and pip match the same interpreter:
@@ -88,23 +96,23 @@ python -m pip install path\to\mediapipe‑0.10.14‑cp312‑cp312‑win_amd64.wh
 ```
 Replace the filename to match your Python minor version (e.g., `cp310` for Python 3.10).
 
-### Other common issues
+### Other common issues ❓
 - **Webcam not opening**: Use a different camera index; ensure the camera is not in use by another app; allow Camera access under Windows Privacy settings.
 - **Cursor movement is jumpy**: Add smoothing or increase the movement threshold in the code before updating `mouse.position`.
 - **App cannot control the mouse**: Some security software blocks simulated input; try running your terminal as Administrator or allow `pynput` behavior.
 
-### Development notes
+### Development notes 📝
 - This project uses MediaPipe Hands for landmark detection and OpenCV for frames.
 - On high-DPI displays, the script queries the primary screen resolution to map normalized landmarks to pixel coordinates.
 - If `main.py` is currently missing, recreate it with the logic described above or restore it from version control.
 
-### References
+### References 🔗
 - [MediaPipe documentation](https://developers.google.com/mediapipe)
 - [MediaPipe on PyPI](https://pypi.org/project/mediapipe/)
 - [OpenCV](https://opencv.org/)
 - [`pynput` on PyPI](https://pypi.org/project/pynput/)
 
-### License
+### License 📄
 If a `LICENSE` file is present in the repository, that license applies. Otherwise, consider adding an open-source license (e.g., MIT) to clarify usage rights.
 
 
