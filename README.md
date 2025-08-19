@@ -1,4 +1,4 @@
-## Mousey - Hand-Tracking Mouse Control (Windows) 🖱️🖐️
+## Mousey - Hand Tracking Mouse Control 🖱️🖐️
 
 ### Overview ✨
 Control your mouse cursor using hand gestures captured from your webcam. This project uses OpenCV for video capture, MediaPipe for real-time hand landmark detection, and `pynput` to move the system cursor and perform clicks/scrolls.
