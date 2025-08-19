@@ -29,7 +29,7 @@ MediaPipe provides prebuilt wheels for Windows x64 for Python 3.8–3.12. If you
 - **Scroll (Right hand pinch)**: Pinch right thumb and index to start scrolling; move hand vertically to scroll. Release to stop.
 - **Click & drag (Left hand pinch)**: Pinch left thumb and index to press/hold left button; move to drag; release to drop.
 
-###📁 Folder structure 
+📁### Folder structure 
 ```
 Ashborn/
 └─ Mousey/
